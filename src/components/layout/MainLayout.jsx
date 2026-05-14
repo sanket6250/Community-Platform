@@ -1,16 +1,25 @@
+import React from 'react'
+
 import Header from './Header'
 import Footer from './Footer'
 
-export default function MainLayout({ children }) {
+import './MainLayout.css'
+
+const MainLayout = ({ children }) => {
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="main-layout">
+
       <Header />
 
-      <main>
+      <main className="main-content">
         {children}
       </main>
 
       <Footer />
+
     </div>
   )
 }
+
+export default MainLayout

@@ -1,69 +1,268 @@
+/* =========================================
+   HEADER
+========================================= */
+
 .header{
   position: sticky;
   top: 0;
   z-index: 999;
-  background: white;
-  border-bottom: 1px solid #f1f1f1;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+
+  background: rgba(255,255,255,0.92);
+
+  backdrop-filter: blur(16px);
+
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
+/* =========================================
+   CONTAINER
+========================================= */
+
 .header-wrapper{
-  height: 80px;
+  height: 84px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+/* =========================================
+   LOGO
+========================================= */
+
 .logo-wrapper{
   display: flex;
   align-items: center;
-  gap: 8px;
 }
 
-.logo-text{
-  font-size: 32px;
-  font-weight: 800;
-  margin: 0;
+.logo-image{
+  height: 38px;
+  object-fit: contain;
+  cursor: pointer;
 }
 
-.logo-dot{
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #facc15;
-  margin-top: 6px;
-}
+/* =========================================
+   NAVIGATION
+========================================= */
 
 .navigation{
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 34px;
+
+  margin-left: 60px;
+  flex: 1;
+}
+
+/* =========================================
+   NAV ITEM
+========================================= */
+
+.nav-dropdown{
+  position: relative;
+}
+
+.nav-dropdown-title{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  cursor: pointer;
+
+  padding: 10px 0;
+
+  position: relative;
 }
 
 .nav-link-custom{
   font-size: 16px;
-  font-weight: 500;
-  color: #374151;
-  transition: 0.3s;
+  font-weight: 600;
+
+  color: #1f2937;
+
+  transition: all 0.25s ease;
+}
+
+a{
+  text-decoration: none !important;
 }
 
 .nav-link-custom:hover{
   color: #6d28d9;
 }
 
-.join-btn{
-  background: linear-gradient(90deg,#2563eb,#7c3aed);
-  color: white;
-  padding: 14px 28px;
-  border-radius: 12px;
-  font-weight: 600;
+/* =========================================
+   DROPDOWN ICON
+========================================= */
+
+.dropdown-arrow{
+  width: 16px;
+  height: 16px;
+
+  color: #6b7280;
+
+  transition: all 0.3s ease;
 }
+
+.nav-dropdown:hover .dropdown-arrow{
+  transform: rotate(180deg);
+  color: #6d28d9;
+}
+
+/* =========================================
+   DROPDOWN MENU
+========================================= */
+
+.dropdown-menu-custom{
+  position: absolute;
+
+  top: 56px;
+  left: 0;
+
+  min-width: 240px;
+
+  background: rgba(255,255,255,0.98);
+
+  backdrop-filter: blur(20px);
+
+  border-radius: 18px;
+
+  padding: 10px;
+
+  border: 1px solid rgba(0,0,0,0.05);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.08),
+    0 2px 10px rgba(0,0,0,0.04);
+
+  animation: dropdownAnimation 0.2s ease;
+
+  z-index: 1000;
+}
+
+/* =========================================
+   DROPDOWN ITEM
+========================================= */
+
+.dropdown-item-custom{
+  display: block;
+
+  padding: 14px 16px;
+
+  border-radius: 12px;
+
+  color: #374151;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  transition: all 0.25s ease;
+}
+
+.dropdown-item-custom:hover{
+  background: #f5f3ff;
+  color: #6d28d9;
+
+  transform: translateX(3px);
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.join-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 190px;
+  height: 52px;
+
+  padding: 0 28px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb 0%,
+    #7c3aed 100%
+  );
+
+  color: #ffffff;
+
+  border: none;
+  outline: none;
+
+  border-radius: 16px;
+
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 10px 24px rgba(124,58,237,0.22);
+
+  white-space: nowrap;
+}
+
+/* HOVER */
+
+.join-btn:hover{
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 28px rgba(124,58,237,0.28);
+}
+
+/* ACTIVE */
+
+.join-btn:active{
+  transform: scale(0.98);
+}
+
+/* BUTTON WRAPPER */
+
+.desktop-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: 24px;
+}
+
+/* =========================================
+   MOBILE MENU
+========================================= */
 
 .mobile-menu{
   display: none;
+
   background: transparent;
+  border: none;
 }
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes dropdownAnimation{
+
+  from{
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
 
 @media(max-width: 992px){
 
@@ -77,5 +276,13 @@
 
   .mobile-menu{
     display: block;
+  }
+
+  .header-wrapper{
+    height: 76px;
+  }
+
+  .logo-image{
+    height: 34px;
   }
 }

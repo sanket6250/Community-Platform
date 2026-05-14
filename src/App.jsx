@@ -7,16 +7,14 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 
 import MainLayout from './components/layout/MainLayout'
-import HeroSection from './components/home/HeroSection'
-import CommunityStats from './components/home/CommunityStats'
+import CommunityBanner from './components/home/CommunityBanner'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
       <MainLayout>
-        <HeroSection />
-        <CommunityStats />
+        <CommunityBanner/>
       </MainLayout>
   )
 }

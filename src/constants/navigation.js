@@ -1,22 +1,81 @@
-export const NAVIGATION = [
+export const navigationData = [
   {
-    label: 'Discussions',
-    href: '/discussions',
+    id: 1,
+    title: 'Discussions',
+    link: '/',
+    hasDropdown: true,
+
+    dropdownItems: [
+      {
+        title: 'General Discussions',
+        link: '/',
+      },
+      {
+        title: 'Technical Discussions',
+        link: '/',
+      },
+      {
+        title: 'Community Ideas',
+        link: '/',
+      },
+    ],
   },
+
   {
-    label: 'Resources',
-    href: '/resources',
+    id: 2,
+    title: 'Resources',
+    link: '/',
+    hasDropdown: true,
+
+    dropdownItems: [
+      {
+        title: 'Blogs',
+        link: '/',
+      },
+      {
+        title: 'Guides',
+        link: '/',
+      },
+      {
+        title: 'Documentation',
+        link: '/',
+      },
+    ],
   },
+
   {
-    label: 'Groups & Events',
-    href: '/events',
+    id: 3,
+    title: 'Groups & Events',
+    link: '/',
+    hasDropdown: true,
+
+    dropdownItems: [
+      {
+        title: 'Upcoming Events',
+        link: '/',
+      },
+      {
+        title: 'Communities',
+        link: '/',
+      },
+      {
+        title: 'Meetups',
+        link: '/',
+      },
+    ],
   },
+
   {
-    label: 'Champions',
-    href: '/champions',
+    id: 4,
+    title: 'Champions',
+    link: '/',
+    hasDropdown: false,
   },
+
   {
-    label: 'Ask an Expert',
-    href: '/expert',
+    id: 5,
+    title: 'Ask an Expert',
+    link: '/',
+    hasDropdown: false,
   },
 ]

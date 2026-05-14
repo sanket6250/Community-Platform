@@ -1,17 +1,15 @@
 import React from 'react'
-import { Menu } from 'lucide-react'
 import './Header.css'
+
+import { Menu } from 'lucide-react'
+
 import { Assets } from '../../assets/Assets'
 
-const Header = () => {
+import { navigationData } from '../../constants/navigation'
 
-  const navigation = [
-    'Discussions',
-    'Resources',
-    'Groups & Events',
-    'Champions',
-    'Ask Expert'
-  ]
+import NavDropdown from './NavDropdown'
+
+const Header = () => {
 
   return (
     <header className="header">
@@ -23,23 +21,24 @@ const Header = () => {
           {/* LOGO */}
           <div className="logo-wrapper">
 
-            <h2 className="logo-text">
-                <img src={Assets.Kytes_Logo}/>
-            </h2>
+            <img
+              src={Assets.Kytes_Logo}
+              alt="Kytes Logo"
+              className="logo-image"
+            />
 
           </div>
 
           {/* NAVIGATION */}
           <nav className="navigation">
 
-            {navigation.map((item) => (
-              <a
-                href="/"
-                key={item}
-                className="nav-link-custom"
-              >
-                {item}
-              </a>
+            {navigationData.map((item) => (
+
+              <NavDropdown
+                key={item.id}
+                item={item}
+              />
+
             ))}
 
           </nav>
@@ -53,9 +52,11 @@ const Header = () => {
 
           </div>
 
-          {/* MOBILE */}
+          {/* MOBILE MENU */}
           <button className="mobile-menu">
+
             <Menu size={28} />
+
           </button>
 
         </div>
