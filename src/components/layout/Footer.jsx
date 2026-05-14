@@ -11,6 +11,7 @@ import {
 import { Send } from 'lucide-react'
 
 import { footerData } from '../../constants/footerData'
+import { Assets } from '../../assets/Assets'
 
 const Footer = () => {
 
@@ -31,10 +32,8 @@ const Footer = () => {
               <div className="footer-logo-wrapper">
 
                 <h2 className="footer-logo">
-                  kytes
+                  <img src={Assets.Kytes_Logo}/>
                 </h2>
-
-                <div className="footer-logo-dot"></div>
 
               </div>
 

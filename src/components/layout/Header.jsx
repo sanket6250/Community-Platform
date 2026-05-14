@@ -1,6 +1,7 @@
 import React from 'react'
 import { Menu } from 'lucide-react'
 import './Header.css'
+import { Assets } from '../../assets/Assets'
 
 const Header = () => {
 
@@ -23,10 +24,8 @@ const Header = () => {
           <div className="logo-wrapper">
 
             <h2 className="logo-text">
-              kytes
+                <img src={Assets.Kytes_Logo}/>
             </h2>
-
-            <div className="logo-dot"></div>
 
           </div>
 
