@@ -8,6 +8,7 @@ import './App.css'
 
 import MainLayout from './components/layout/MainLayout'
 import CommunityBanner from './components/home/CommunityBanner'
+import CommunityHighlights from './components/home/CommunityHighlights'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +16,7 @@ function App() {
   return (
       <MainLayout>
         <CommunityBanner/>
+        <CommunityHighlights />
       </MainLayout>
   )
 }
