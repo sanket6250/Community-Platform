@@ -1,0 +1,260 @@
+/* =========================================
+   COMMUNITY SPOTLIGHT
+========================================= */
+
+.community-spotlight-section{
+  width: 100%;
+  background: #f4f9fd;
+  overflow: hidden;
+}
+
+/* Same alignment as other sections */
+.community-spotlight-section .container{
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* Wrapper aligned exactly inside container */
+.community-spotlight-wrapper{
+  position: relative;
+
+  min-height: 390px;
+
+  display: grid;
+  grid-template-columns: 52% 48%;
+
+  align-items: center;
+
+  width: 100%;
+}
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.community-spotlight-content{
+  position: relative;
+  z-index: 3;
+  max-width: 610px;
+  padding: 56px;
+}
+
+.community-spotlight-content h2{
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 500;
+
+  color: #0062c8;
+
+  margin-bottom: 16px;
+}
+
+.community-spotlight-content h3{
+  font-size: 22px;
+  line-height: 1.35;
+  font-weight: 600;
+
+  color: #111111;
+
+  margin-bottom: 22px;
+}
+
+.community-spotlight-content p{
+  font-size: 14px;
+  line-height: 1.65;
+
+  color: #1f2937;
+
+  max-width: 560px;
+
+  margin-bottom: 30px;
+}
+
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.community-spotlight-actions{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.spotlight-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  height: 42px;
+
+  padding: 0 8px 0 18px;
+
+  border-radius: 8px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.spotlight-btn:hover{
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.spotlight-btn-primary{
+  background: linear-gradient(90deg, #0757f9, #8b1edc);
+}
+
+.spotlight-btn-secondary{
+  background: linear-gradient(90deg, #e32cc9, #7b2cff);
+}
+
+.spotlight-btn-icon{
+  width: 28px;
+  height: 28px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.22);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================
+   RIGHT VISUAL
+========================================= */
+
+.community-spotlight-visual{
+  position: relative;
+
+  height: 390px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  overflow: visible;
+}
+
+.spotlight-wave{
+position: absolute;
+    right: -168px;
+    top: -4px;
+    width: 708px;
+    max-width: none;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.spotlight-person{
+    position: relative;
+    height: 400px;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: bottom center;
+    z-index: 2;
+    top: 3%;
+    left: -10%;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width: 1200px){
+
+  .community-spotlight-wrapper{
+    grid-template-columns: 54% 46%;
+  }
+
+  .spotlight-wave{
+    right: -120px;
+  }
+}
+
+@media(max-width: 992px){
+
+  .community-spotlight-wrapper{
+    grid-template-columns: 1fr;
+  }
+
+  .community-spotlight-content{
+    max-width: 100%;
+    padding: 50px 0 20px;
+  }
+
+  .community-spotlight-visual{
+    height: 350px;
+    justify-content: center;
+  }
+
+  .spotlight-person{
+    height: 330px;
+  }
+
+  .spotlight-wave{
+    right: 0;
+    top: 20px;
+    width: 500px;
+  }
+}
+
+@media(max-width: 576px){
+
+  .community-spotlight-section .container{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .community-spotlight-content{
+    padding: 44px 0 16px;
+  }
+
+  .community-spotlight-content h2{
+    font-size: 29px;
+  }
+
+  .community-spotlight-content h3{
+    font-size: 21px;
+  }
+
+  .community-spotlight-content p{
+    font-size: 14px;
+  }
+
+  .community-spotlight-actions{
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .spotlight-btn{
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .community-spotlight-visual{
+    height: 300px;
+  }
+
+  .spotlight-person{
+    height: 285px;
+  }
+
+  .spotlight-wave{
+    width: 420px;
+    right: -100px;
+  }
+}

@@ -9,6 +9,9 @@ import './App.css'
 import MainLayout from './components/layout/MainLayout'
 import CommunityBanner from './components/home/CommunityBanner'
 import CommunityHighlights from './components/home/CommunityHighlights'
+import FeaturedGroups from './components/home/FeaturedGroups'
+import LiveWebinar from './components/home/LiveWebinar'
+import CommunitySpotlight from './components/home/CommunitySpotlight'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,6 +20,9 @@ function App() {
       <MainLayout>
         <CommunityBanner/>
         <CommunityHighlights />
+        <FeaturedGroups />
+        <LiveWebinar />
+        <CommunitySpotlight />
       </MainLayout>
   )
 }

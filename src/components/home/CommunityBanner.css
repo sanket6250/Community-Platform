@@ -5,7 +5,7 @@
 .community-banner{
   position: relative;
 
-  min-height: 520px;
+  min-height: 420px;
 
   display: flex;
   align-items: center;
@@ -24,14 +24,6 @@
 .banner-overlay{
   position: absolute;
   inset: 0;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0,0,0,0.45),
-      rgba(0,0,0,0.15)
-    );
-
   z-index: 1;
 }
 
@@ -52,15 +44,12 @@
    TITLE
 ========================================= */
 
-.banner-title{
-  color: white;
-
-  font-size: 72px;
-  font-weight: 800;
-
-  line-height: 1.1;
-
-  margin-bottom: 24px;
+.banner-title {
+    color: white;
+    font-size: 66px;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 24px;
 }
 
 /* =========================================
@@ -68,41 +57,30 @@
 ========================================= */
 
 .banner-description{
-  color: rgba(255,255,255,0.92);
-
-  font-size: 22px;
-  line-height: 1.7;
-
-  max-width: 650px;
-
-  margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 650px;
+    margin-bottom: 40px;
 }
 
 /* =========================================
    BUTTON
 ========================================= */
 
-.banner-btn{
-  display: inline-flex;
-  align-items: center;
-  gap: 18px;
-
-  padding: 10px 12px 10px 24px;
-
-  border-radius: 16px;
-
-  border: 1px solid rgba(255,255,255,0.3);
-
-  background: rgba(255,255,255,0.08);
-
-  backdrop-filter: blur(12px);
-
-  color: white;
-
-  font-size: 16px;
-  font-weight: 600;
-
-  transition: all 0.3s ease;
+.banner-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 34px;
+    padding: 7px 12px 7px 24px;
+    border-radius: 16px;
+    border: 1px solid white;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all 0.3s ease;
 }
 
 .banner-btn:hover{
@@ -115,19 +93,15 @@
    BUTTON ICON
 ========================================= */
 
-.banner-btn-icon{
-  width: 42px;
-  height: 42px;
-
-  border-radius: 50%;
-
-  background: rgba(255,255,255,0.18);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 18px;
+.banner-btn-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #FF5EEA;
+    display: flex;
+    align-items: stretch;
+    font-size: 17px;
+    justify-content: center;
 }
 
 /* =========================================
